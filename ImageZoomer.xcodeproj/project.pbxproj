@@ -12,6 +12,7 @@
 		7EFC29681BD2FCDA00B49BDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EFC29661BD2FCDA00B49BDC /* Main.storyboard */; };
 		7EFC296A1BD2FCDA00B49BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EFC29691BD2FCDA00B49BDC /* Assets.xcassets */; };
 		7EFC296D1BD2FCDA00B49BDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EFC296B1BD2FCDA00B49BDC /* LaunchScreen.storyboard */; };
+		7EFC29771BD54D5500B49BDC /* Iceland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EFC29761BD54D5500B49BDC /* Iceland.jpg */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		7EFC29691BD2FCDA00B49BDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EFC296C1BD2FCDA00B49BDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EFC296E1BD2FCDA00B49BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EFC29761BD54D5500B49BDC /* Iceland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Iceland.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		7EFC29611BD2FCDA00B49BDC /* ImageZoomer */ = {
 			isa = PBXGroup;
 			children = (
+				7EFC29761BD54D5500B49BDC /* Iceland.jpg */,
 				7EFC29621BD2FCDA00B49BDC /* AppDelegate.swift */,
 				7EFC29641BD2FCDA00B49BDC /* ViewController.swift */,
 				7EFC29661BD2FCDA00B49BDC /* Main.storyboard */,
@@ -123,6 +126,7 @@
 			files = (
 				7EFC296D1BD2FCDA00B49BDC /* LaunchScreen.storyboard in Resources */,
 				7EFC296A1BD2FCDA00B49BDC /* Assets.xcassets in Resources */,
+				7EFC29771BD54D5500B49BDC /* Iceland.jpg in Resources */,
 				7EFC29681BD2FCDA00B49BDC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +253,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ImageZoomer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.robotanz.ImageZoomer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -260,6 +265,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ImageZoomer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.robotanz.ImageZoomer;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageZoomer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97s-KZ-evt">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IJP-0R-qw2">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <animations/>
+                                        <color key="backgroundColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="pid-EW-KOT" appends="YES" id="Pjm-2S-eJL"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.94827198980000005" green="0.096893071230000002" blue="0.16516973509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="IJP-0R-qw2" firstAttribute="leading" secondItem="97s-KZ-evt" secondAttribute="leading" id="5Jb-qu-baH"/>
+                                    <constraint firstAttribute="trailing" secondItem="IJP-0R-qw2" secondAttribute="trailing" id="5zc-fy-kS8"/>
+                                    <constraint firstItem="IJP-0R-qw2" firstAttribute="top" secondItem="97s-KZ-evt" secondAttribute="top" id="MxW-MF-kMf"/>
+                                    <constraint firstItem="IJP-0R-qw2" firstAttribute="centerX" secondItem="97s-KZ-evt" secondAttribute="centerX" id="Vpb-Lp-dTv"/>
+                                    <constraint firstAttribute="bottom" secondItem="IJP-0R-qw2" secondAttribute="bottom" id="ijI-QY-ODW"/>
+                                    <constraint firstItem="IJP-0R-qw2" firstAttribute="centerY" secondItem="97s-KZ-evt" secondAttribute="centerY" id="wBi-42-eTG"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Whr-tw-VOF"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="97s-KZ-evt" secondAttribute="bottom" id="2le-UH-scj"/>
+                            <constraint firstAttribute="trailing" secondItem="97s-KZ-evt" secondAttribute="trailing" id="9ma-Te-ek4"/>
+                            <constraint firstItem="97s-KZ-evt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RNi-t4-o0T"/>
+                            <constraint firstItem="97s-KZ-evt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iF4-RR-snp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="IJP-0R-qw2" id="ekt-w1-jMI"/>
+                        <outlet property="scrollView" destination="97s-KZ-evt" id="uxC-9A-auk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="pid-EW-KOT">
+                    <connections>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="HGW-eJ-9FI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="287" y="400"/>
         </scene>
     </scenes>
 </document>
