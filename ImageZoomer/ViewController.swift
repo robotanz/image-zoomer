@@ -19,19 +19,14 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //shouldInit = true
     }
     
     override func viewDidLayoutSubviews() {
         
         if(shouldInit == nil) {
-            scrollView.translatesAutoresizingMaskIntoConstraints = false
-            imageView.translatesAutoresizingMaskIntoConstraints = false
             
             let image = UIImage(named: "Iceland.jpg")!
             imageView.image = image
-            
             
             var imageSize = image.size
             let screenScale = UIScreen.mainScreen().scale
@@ -46,8 +41,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             scrollView.minimumZoomScale = 1
             scrollView.maximumZoomScale = 3
             scrollView.zoomScale = 1
-            
-            //scrollView.zoomToRect(imageFrame, animated: false)
         }
     }
 
@@ -70,31 +63,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidEndZooming(scrollView: UIScrollView,
         withView view: UIView?,
         atScale scale: CGFloat) {
-            
             //print("Scale: ", scale)
-            
-            centerScrollViewContents()
+            //centerScrollViewContents()
     }
-
-    func centerScrollViewContents() {
-        // This method centers the scroll view contents also used on did zoom
-        let boundsSize = scrollView.bounds.size
-        var contentsFrame = imageView.frame
-        
-        if (contentsFrame.size.width < boundsSize.width) {
-            contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2.0
-        } else {
-            contentsFrame.origin.x = 0.0
-        }
-        
-        if (contentsFrame.size.height < boundsSize.height) {
-            contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2.0
-        } else {
-            contentsFrame.origin.y = 0.0
-        }
-        
-        imageView.frame = contentsFrame;
-    }
-
 }
 
