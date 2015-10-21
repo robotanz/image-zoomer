@@ -64,7 +64,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         withView view: UIView?,
         atScale scale: CGFloat) {
             //print("Scale: ", scale)
-            //centerScrollViewContents()
     }
 }
 
